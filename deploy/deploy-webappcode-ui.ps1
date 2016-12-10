@@ -29,6 +29,9 @@ echo "source directory to build: $sourceDirToBuild"
 
 # Build the quiz ui with angular CLI:
 # npm install --dev
+Push-Location "$sourceDirToBuild\src\node"
+npm update 
+Pop-Location
 
 # Select Subscription:
 Get-AzureRmSubscription -SubscriptionName "$SubscriptionName" | Select-AzureRmSubscription
